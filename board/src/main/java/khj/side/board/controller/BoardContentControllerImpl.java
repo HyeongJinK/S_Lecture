@@ -17,7 +17,7 @@ public class BoardContentControllerImpl implements BoardContentController {
 
     @Override
     public ResponseEntity<Page<BoardContent>> getList(BoardContentSearchRequest boardContentSearchRequest) {
-        return ResponseEntity.ok(boardContentService.getList(boardContentSearchRequest.getBoardIdx()));
+        return ResponseEntity.ok(boardContentService.getList(boardContentSearchRequest));
     }
 
     @Override

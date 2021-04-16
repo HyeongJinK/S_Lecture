@@ -2,6 +2,7 @@ package khj.side.board.service;
 
 import khj.side.board.entity.BoardContent;
 import khj.side.board.repository.BoardContentRepository;
+import khj.side.board.request.BoardContentSearchRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -16,8 +17,8 @@ public class BoardContentServiceImpl implements BoardContentService {
     private final BoardContentRepository boardContentRepository;
 
     @Override
-    public Page<BoardContent> getList(Long boardIdx) {
-        return boardContentRepository.findByBoardBoardIdx(boardIdx);
+    public Page<BoardContent> getList(BoardContentSearchRequest request) {
+        return boardContentRepository.findAllBySearch(request);
     }
 
     @Override
