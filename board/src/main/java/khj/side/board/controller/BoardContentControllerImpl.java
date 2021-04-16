@@ -1,6 +1,7 @@
 package khj.side.board.controller;
 
 import khj.side.board.entity.BoardContent;
+import khj.side.board.request.BoardContentSearchRequest;
 import khj.side.board.service.BoardContentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -15,8 +16,8 @@ public class BoardContentControllerImpl implements BoardContentController {
     private final BoardContentService boardContentService;
 
     @Override
-    public ResponseEntity<Page<BoardContent>> getList(Long boardIdx) {
-        return ResponseEntity.ok(boardContentService.getList(boardIdx));
+    public ResponseEntity<Page<BoardContent>> getList(BoardContentSearchRequest boardContentSearchRequest) {
+        return ResponseEntity.ok(boardContentService.getList(boardContentSearchRequest.getBoardIdx()));
     }
 
     @Override

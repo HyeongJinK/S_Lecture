@@ -1,6 +1,7 @@
 package khj.side.board.controller;
 
 import khj.side.board.entity.BoardContent;
+import khj.side.board.request.BoardContentSearchRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ import java.util.List;
 public interface BoardContentController {
 
     @GetMapping
-    ResponseEntity<Page<BoardContent>> getList(Long boardIdx);
+    ResponseEntity<Page<BoardContent>> getList(BoardContentSearchRequest boardContentSearchRequest);
 
     @GetMapping("/{boardContentIdx}")
     ResponseEntity<BoardContent> get(@PathVariable Long boardContentIdx);
