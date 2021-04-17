@@ -13,7 +13,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 
 @RequiredArgsConstructor
-public class BoardContentImplRepository implements BoardContentCustomRepository {
+public class BoardContentRepositoryImpl implements BoardContentCustomRepository {
     private final JPAQueryFactory queryFactory;
 
     @Override

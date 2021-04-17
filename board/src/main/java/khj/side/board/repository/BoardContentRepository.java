@@ -8,5 +8,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BoardContentRepository extends JpaRepository<BoardContent, Long>, BoardContentCustomRepository {
-    Page<BoardContent> findByBoardBoardIdx(Long boardIdx);
 }
