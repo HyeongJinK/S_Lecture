@@ -1,16 +1,36 @@
 package khj.side.board.controller;
 
+import io.swagger.annotations.*;
 import khj.side.board.entity.BoardContent;
 import khj.side.board.request.BoardContentSearchRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
+@Api(value = "게시판")
 @RequestMapping("/board")
 public interface BoardContentController {
-
+    @ApiOperation(value = "게시글 리스트")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Success"),
+            @ApiResponse(code = 400, message = "Bad Request")
+    })
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "boardIdx"
+                    , value = "게시판 번호"
+                    , required = true
+                    , dataType = "Long"
+                    , paramType = "param"
+                    , defaultValue = ""
+            ),
+            @ApiImplicitParam(name = "searchText"
+                    , value = "검색할 문자열"
+                    , required = false
+                    , dataType = "String"
+                    , paramType = "param"
+                    , defaultValue = ""
+            )
+    })
     @GetMapping
     ResponseEntity<Page<BoardContent>> getList(BoardContentSearchRequest boardContentSearchRequest);
 
