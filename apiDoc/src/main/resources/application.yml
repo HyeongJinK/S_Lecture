@@ -1,38 +1,20 @@
 server.port: 8082
 
-invest:
-  userUrl: http://localhost:7501
-  irUrl: http://localhost:7301
-  companyUrl: http://localhost:7101
-  communicationUrl: http://localhost:7601
-  shopUrl: http://localhost:7401
-  investmentUrl: http://localhost:7201
-  startUpUrl: http://localhost:8080
-  vcUrl: http://localhost:8081
+url:
+  boardUrl: http://localhost:7100
+  todoUrl: http://localhost:7101
 
 ---
 spring.profiles: dev
 
-invest:
-  userUrl: http://user
-  irUrl: http://ir
-  companyUrl: http://company
-  communicationUrl: http://communication
-  shopUrl: http://shop
-  investmentUrl: http://investment
-  startUpUrl: https://startup
-  vcUrl: http://vc
+url:
+  boardUrl: http://localhost:7100
+  todoUrl: http://localhost:7101
 
 ---
 spring:
   profiles: prod
 
-invest:
-  userUrl: http://user
-  irUrl: http://ir
-  companyUrl: http://company
-  communicationUrl: http://communication
-  shopUrl: http://shop
-  investmentUrl: http://investment
-  startUpUrl: https://startup
-  vcUrl: http://vc
+url:
+  boardUrl: http://localhost:7100
+  todoUrl: http://localhost:7101
