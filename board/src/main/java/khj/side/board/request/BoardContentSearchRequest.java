@@ -6,4 +6,6 @@ import lombok.Getter;
 public class BoardContentSearchRequest {
     Long boardIdx;
     String searchText;
+    int currentPage;
+    int rows;
 }
