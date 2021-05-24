@@ -36,11 +36,13 @@ public class BoardContentServiceImpl implements BoardContentService {
     }
 
     @Override
+    @Transactional
     public Long edit(BoardContent boardContent) {
         return boardContentRepository.save(boardContent).getBoardContentIdx();
     }
 
     @Override
+    @Transactional
     public void del(Long boardContentIdx) {
         boardContentRepository.deleteById(boardContentIdx);
     }
