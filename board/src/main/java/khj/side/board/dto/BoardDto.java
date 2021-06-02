@@ -8,3 +8,4 @@ public class BoardDto {
     String name;
     int contentCount;
 }
+
