@@ -24,8 +24,9 @@ public class BoardContentRepositoryImpl implements BoardContentCustomRepository 
         BooleanBuilder search = new BooleanBuilder();
 
         if (request.getSearchText() != "") {
-            search.and(boardContent.content.contains(request.getSearchText()))
-                    .and(boardContent.subject.contains(request.getSearchText()));
+            search.and(boardContent.content.contains(request.getSearchText())
+                    .or(boardContent.subject.contains(request.getSearchText()))
+            );
         }
 
         QueryResults<BoardContent> results = queryFactory.selectFrom(boardContent)

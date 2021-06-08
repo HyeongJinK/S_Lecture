@@ -4,8 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Entity
@@ -13,6 +13,10 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class Board {
     @Id
+    @GeneratedValue
     Long boardIdx;
     String name;
+
+    @OneToMany(mappedBy = "board", fetch = FetchType.LAZY)
+    List<BoardContent> boardContentList;
 }
