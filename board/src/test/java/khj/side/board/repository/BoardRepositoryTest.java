@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
 
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,7 +22,7 @@ class BoardRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        boardRepository.save(new Board(1L, "테스트 게시판"));
+        boardRepository.save(new Board(1L, "테스트 게시판", Collections.emptyList()));
     }
 
     @Test
