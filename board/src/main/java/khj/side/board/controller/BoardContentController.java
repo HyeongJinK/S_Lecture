@@ -33,4 +33,5 @@ public interface BoardContentController {
 
     @DeleteMapping("/{boardContentIdx}")
     ResponseEntity<String> del(@PathVariable Long boardContentIdx);
+
 }
