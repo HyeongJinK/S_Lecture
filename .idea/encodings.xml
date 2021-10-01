@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/apiDoc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backup/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/board/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/board/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/todo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/todo/src/main/resources" charset="UTF-8" />
   </component>
 </project>

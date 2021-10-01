@@ -1,4 +1,4 @@
-package khj.side.board.conf;
+package khj.side.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

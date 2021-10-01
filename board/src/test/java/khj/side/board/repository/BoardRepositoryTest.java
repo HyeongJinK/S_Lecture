@@ -1,7 +1,7 @@
 package khj.side.board.repository;
 
-import khj.side.board.conf.QuerydslConfiguration;
 import khj.side.board.entity.Board;
+import khj.side.configuration.QuerydslConfiguration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
