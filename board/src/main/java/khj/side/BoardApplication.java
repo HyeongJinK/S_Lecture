@@ -1,4 +1,4 @@
-package khj.side.board;
+package khj.side;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
