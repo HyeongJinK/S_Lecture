@@ -1,4 +1,4 @@
-package khj.side.user.entity;
+package khj.side.user.domain;
 
 public class User {
     Long idx;
