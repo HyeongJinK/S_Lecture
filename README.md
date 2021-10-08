@@ -7,6 +7,7 @@
 * [기능](./doc/feat.md)
 * [기술 스택](./doc/skill.md)
 * 인프라 구성
+* [게시판 구성(예)](./doc/infra/board.md)
 
 ## 컨벤션
 
